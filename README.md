@@ -30,5 +30,5 @@
 * Create scaffold
     rails g scaffold <tên bảng> <tên trường 1:kiểu dữ liệu> <tên trường 2:kiểu dữ liệu>...<tên trường n:kiểu dữ liệu>
 
-
-
+* Rake database
+    rake db:migrate
