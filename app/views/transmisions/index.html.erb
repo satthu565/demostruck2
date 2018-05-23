@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Transmisions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transmisions.each do |transmision| %>
+      <tr>
+        <td><%= transmision.name %></td>
+        <td><%= link_to 'Show', transmision %></td>
+        <td><%= link_to 'Edit', edit_transmision_path(transmision) %></td>
+        <td><%= link_to 'Destroy', transmision, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transmision', new_transmision_path %>
