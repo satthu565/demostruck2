@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :colors
+  resources :transmisions
+  resources :fuels
   resources :engines
   resources :models
   resources :products
