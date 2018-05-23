@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Modelid</th>
+      <th>Fabrication</th>
+      <th>Fuelid</th>
+      <th>Engineid</th>
+      <th>Transmisionid</th>
+      <th>Colorid</th>
+      <th>Door</th>
+      <th>Co2</th>
+      <th>Feature</th>
+      <th>Other parameter</th>
+      <th>Safety</th>
+      <th>Comfort</th>
+      <th>Moreinfo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= product.modelID %></td>
+        <td><%= product.fabrication %></td>
+        <td><%= product.fuelID %></td>
+        <td><%= product.engineID %></td>
+        <td><%= product.transmisionID %></td>
+        <td><%= product.colorID %></td>
+        <td><%= product.door %></td>
+        <td><%= product.co2 %></td>
+        <td><%= product.feature %></td>
+        <td><%= product.other_parameter %></td>
+        <td><%= product.safety %></td>
+        <td><%= product.comfort %></td>
+        <td><%= product.moreinfo %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
