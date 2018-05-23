@@ -1,24 +1,30 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
+* Create Project 
+    - "rails new name_project"
 * Database initialization
+    - Install mysql gem file: "gem 'mysql2', '~> 0.4.4'"
+    - Connect mysql database: config/database.yml
+       "default: &default
+          adapter: mysql2
+          encoding: utf8
+          pool: 5
+          username: root
+          password: ""
+          socket: /var/run/mysqld/mysqld.sock
+        
+        development:
+          <<: *default
+          database: demostruck2
+        
+        test:
+          <<: *default
+          database: demostruck2_test
+        
+        production:
+          <<: *default
+          database: demostruck2_production
+          username: demostruck2
+          password: <%= ENV['LOGIN_APP_DATABASE_PASSWORD'] %>"
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
