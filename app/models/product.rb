@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
-  belongs_to :model
-  belongs_to :color
-  belongs_to :engine
-  belongs_to :fuel
-  belongs_to :transmision
+  belongs_to :model, optional: true
+  belongs_to :color, optional: true
+  belongs_to :engine, optional: true
+  belongs_to :fuel, optional: true
+  belongs_to :transmision, optional: true
 end
