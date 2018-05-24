@@ -13,7 +13,19 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @products = Product.all
+    new_params = params.reject {|n| n=="controller" || n=="action" || n=="commit" || n=="category"}
+    if new_params.empty?
+      @products = Product.all
+      render "search", :locals => { :product => @products }
+    else
+      if (new_params["product"].values.all?(&:blank?) && new_params["date"].values.all?(&:blank?))
+        @products = Product.all
+        render "search", :locals => { :product => @products }
+      else
+        @products = Product.search(new_params)
+        render "search", :locals => { :product => @products }
+      end
+    end
   end
 
   # GET /products/new

@@ -61,28 +61,29 @@
           <div class="clear"></div>
         </div>
         <ul class="catalog_list">
-          <li>
-            <a href="#">
-              <% image_tag("placeholders/213x164.gif") %>
-              <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-              <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-            </a>
-          </li>
-          <li class="second">
-            <a href="#">
-              <% image_tag("placeholders/213x164.gif") %>
-              <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-              <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-            </a>
-          </li>
-          <li class="last">
-            <a href="#">
-              <% image_tag("placeholders/213x164.gif") %>
-              <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-              <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-            </a>
-          </li>
-
+          <% i = 0
+            @products.each do |product|
+              if i == 0
+                li_class=""
+              elsif i == 1
+                li_class="second"
+              else
+                li_class="last"
+                i=-1
+              end %>
+            <li class="<%= li_class %>">
+              <a href="#">
+                <% image_tag("placeholders/213x164.gif") %>
+                <div class="description">
+                  Fabrication: <%= product.fabrication %><br/>
+                  Fuels: <%= Fuel.find_by(id: product.fuelID).name %><br/>
+                  Transmision: <%= Transmision.find_by(id: product.transmisionID).name %><br/>
+                  Color: <%= Color.find_by(id: product.colorID).name %><br/>
+                  Engine: <%= Engine.find_by(id: product.engineID).name %></div>
+                <div class="title"><%= product.name %><span class="price"><%= product.price %></span></div>
+              </a>
+            </li>
+          <% i+=1 end %>
         </ul>
         <div class="bottom_catalog_box">
           <div class="pagination">

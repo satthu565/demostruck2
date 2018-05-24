@@ -1,5 +1,5 @@
 <div class="catalog_sidebar">
-  <%= form_tag(products_path, :method => "get", id: "search-form", enforce_utf8: false) do %>
+  <%= form_tag("search", :method => "post", id: "search-form", enforce_utf8: false) do %>
     <div class="search_auto">
       <h3><strong>Search</strong> auto</h3>
       <div class="categories">
@@ -59,7 +59,7 @@
         <input type="checkbox"/>
         <label class="check_label">Only new cars</label>
       </div>
-      <input type="submit" value="Search" class="btn_search"/>
+      <%= submit_tag "Search", class:"btn_search" %>
       <div class="clear"></div>
     </div>
   <% end %>
