@@ -1,0 +1,106 @@
+<!--BEGIN CONTENT-->
+<div id="content">
+  <div class="content">
+    <div class="breadcrumbs">
+      <a href="#">Home</a>
+      <% image_tag("marker_2.gif") %>
+      <span>Cars</span>
+    </div>
+    <div class="main_wrapper">
+      <div class="cars_categories">
+        <span>All cars</span>
+        <a href="#"><span>new cars</span></a>
+        <a href="#"><span>used cars</span></a>
+      </div>
+      <h1><strong>Cars</strong> (15.345 results)</h1>
+
+      <%= render 'formSearch', product: @product %>
+
+      <div class="main_catalog">
+        <div class="top_catalog_box">
+          <div class="switch">
+            <a href="#" class="table_view"></a>
+            <span class="list_view"></span>
+          </div>
+          <div class="sorting drop_list">
+            <strong>Sort by: </strong>
+            <div class="selected">
+              <span><a href="#">Date</a></span>
+              <ul>
+                <li><a href="#">Date</a></li>
+                <li><a href="#">Price</a></li>
+                <li><a href="#">Name</a></li>
+                <li><a href="#">Manufacturer</a></li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="view_on_page drop_list">
+            <strong>View on page:</strong>
+            <div class="selected">
+              <span><a href="#">10</a></span>
+              <ul>
+                <li><a href="#">10</a></li>
+                <li><a href="#">20</a></li>
+                <li><a href="#">50</a></li>
+                <li><a href="#">100</a></li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="pagination">
+            <ul>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li class="space">...</li>
+              <li><a href="#">8</a></li>
+              <li class="next"><a href="#"><% image_tag("page_next.gif") %></a></li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <ul class="catalog_list">
+          <% i = 0
+            @products.each do |product|
+              if i == 0
+                li_class=""
+              elsif i == 1
+                li_class="second"
+              else
+                li_class="last"
+                i=-1
+              end %>
+            <li class="<%= li_class %>">
+              <a href="#">
+                <% image_tag("placeholders/213x164.gif") %>
+                <div class="description">
+                  Fabrication: <%= product.fabrication %><br/>
+                  Fuels: <%= Fuel.find_by(id: product.fuelID).name %><br/>
+                  Transmision: <%= Transmision.find_by(id: product.transmisionID).name %><br/>
+                  Color: <%= Color.find_by(id: product.colorID).name %><br/>
+                  Engine: <%= Engine.find_by(id: product.engineID).name %></div>
+                <div class="title"><%= product.name %><span class="price"><%= product.price %></span></div>
+              </a>
+            </li>
+          <% i+=1 end %>
+        </ul>
+        <div class="bottom_catalog_box">
+          <div class="pagination">
+            <ul>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li class="space">...</li>
+              <li><a href="#">8</a></li>
+              <li class="next"><a href="#"><% image_tag("page_next.gif") %></a></li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<!--EOF CONTENT-->

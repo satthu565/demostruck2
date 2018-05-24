@@ -32,3 +32,6 @@
 
 * Rake database
     rake db:migrate
+
+* Add column to table
+    rails generate migration add_A_to_B column_name:type
