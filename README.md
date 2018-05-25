@@ -41,3 +41,4 @@
     
 * Render kaminari_config file
     rails g kaminari:config
+    Note: After install must be reset rails server
