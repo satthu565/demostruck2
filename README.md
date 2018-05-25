@@ -39,6 +39,9 @@
 * Add column to table
     rails generate migration add_A_to_B column_name:type
     
-* Render kaminari_config file
-    rails g kaminari:config
+* Kaminari
+    - Render kaminari_config file: rails g kaminari:config
+    - Render file to fix GUI: rails g kaminari:views default
     Note: After install must be reset rails server
+    
+    
