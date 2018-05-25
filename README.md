@@ -38,3 +38,6 @@
 
 * Add column to table
     rails generate migration add_A_to_B column_name:type
+    
+* Render kaminari_config file
+    rails g kaminari:config
