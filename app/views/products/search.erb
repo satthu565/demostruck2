@@ -49,14 +49,7 @@
             <div class="clear"></div>
           </div>
           <div class="pagination">
-            <ul>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li class="space">...</li>
-              <li><a href="#">8</a></li>
-              <li class="next"><a href="#"><% image_tag("page_next.gif") %></a></li>
-            </ul>
+            <%= paginate (@products) %>
           </div>
           <div class="clear"></div>
         </div>
