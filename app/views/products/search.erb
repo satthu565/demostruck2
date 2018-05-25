@@ -72,7 +72,7 @@
                 i=-1
               end %>
             <li class="<%= li_class %>">
-              <a href="#">
+              <%= link_to ("products/#{product.id}") do  %>
                 <% image_tag("placeholders/213x164.gif") %>
                 <div class="description">
                   Fabrication: <%= product.fabrication %><br/>
@@ -81,7 +81,7 @@
                   Color: <%= Color.find_by(id: product.colorID).name %><br/>
                   Engine: <%= Engine.find_by(id: product.engineID).name %></div>
                 <div class="title"><%= product.name %><span class="price"><%= product.price %></span></div>
-              </a>
+              <% end %>
             </li>
           <% i+=1 end %>
         </ul>
