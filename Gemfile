@@ -51,5 +51,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Mysql gem
 gem 'mysql2', '~> 0.4.4'
+
 #Kaminari gem : Pagination
 gem 'kaminari'
+
+#Admin page
+gem 'activeadmin'
+gem 'devise'
+gem 'cancan'
+gem 'draper'
+gem 'pundit'
