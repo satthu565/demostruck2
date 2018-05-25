@@ -4,11 +4,11 @@
   <div class="content">
     <div class="breadcrumbs">
       <a href="#">Home</a>
-      <img src="images/marker_2.gif" alt=""/>
+      <%= image_tag("marker_2.gif") %>
       <a href="#">Cars</a>
-      <img src="images/marker_2.gif" alt=""/>
+      <%= image_tag("marker_2.gif") %>
       <a href="#">Mercedes-Benz</a>
-      <img src="images/marker_2.gif" alt=""/>
+      <%= image_tag("marker_2.gif") %>
       <span>Mercedes-Benz CLS 320</span>
     </div>
     <div class="main_wrapper">
@@ -19,26 +19,26 @@
       <h1><strong><%= @product.name %></strong></h1>
       <div class="car_image_wrapper car_group">
         <div class="big_image">
-          <a href="images/placeholders/480x292.gif?v=1" class="car_group">
-            <img src="images/zoom.png" alt="" class="zoom"/>
-            <img src="images/placeholders/480x292.gif" alt=""/>
+          <a href="<%= request.base_url %>/assets/placeholders/480x292.gif?v=1" class="car_group">
+            <%= image_tag("zoom.png", class: "zoom") %>
+            <%= image_tag("placeholders/480x292.gif") %>
           </a>
         </div>
         <div class="small_img">
-          <a href="images/placeholders/620x425.gif?v=1" class="car_group">
-            <img src="images/placeholders/81x62.gif" alt=""/>
+          <a href="<%= request.base_url %>/assets/placeholders/620x425.gif?v=1" class="car_group">
+            <%= image_tag("placeholders/81x62.gif") %>
           </a>
-          <a href="images/placeholders/620x425.gif" class="car_group">
-            <img src="images/placeholders/81x62.gif" alt=""/>
+          <a href="<%= request.base_url %>/assets/placeholders/620x425.gif" class="car_group">
+            <%= image_tag("placeholders/81x62.gif") %>
           </a>
-          <a href="images/placeholders/620x425.gif" class="car_group">
-            <img src="images/placeholders/81x62.gif" alt=""/>
+          <a href="<%= request.base_url %>/assets/placeholders/620x425.gif" class="car_group">
+            <%= image_tag("placeholders/81x62.gif") %>
           </a>
-          <a href="images/placeholders/620x425.gif" class="car_group">
-            <img src="images/placeholders/81x62.gif" alt=""/>
+          <a href="<%= request.base_url %>/assets/placeholders/620x425.gif" class="car_group">
+            <%= image_tag("placeholders/81x62.gif") %>
           </a>
-          <a href="images/placeholders/620x425.gif" class="car_group">
-            <img src="images/placeholders/81x62.gif" alt=""/>
+          <a href="<%= request.base_url %>/assets/placeholders/620x425.gif" class="car_group">
+            <%= image_tag("placeholders/81x62.gif") %>
           </a>
         </div>
       </div>
@@ -173,7 +173,9 @@
           <div class="clear"></div>
         </div>
         <div class="banner">
-          <a href="#"><img src="images/pics/banner_car.jpg" alt=""/></a>
+          <a href="#">
+            <%= image_tag("pics/banner_car.jpg") %>
+          </a>
         </div>
       </div>
       <div class="clear"></div>
@@ -182,28 +184,28 @@
         <ul>
           <li>
             <a href="#">
-              <img src="images/placeholders/220x164.gif" alt=""/>
+              <%= image_tag("placeholders/220x164.gif") %>
               <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
               <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="images/placeholders/220x164.gif" alt=""/>
+              <%= image_tag("placeholders/220x164.gif") %>
               <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
               <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="images/placeholders/220x164.gif" alt=""/>
+              <%= image_tag("placeholders/220x164.gif") %>
               <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
               <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
             </a>
           </li>
           <li class="last">
             <a href="#">
-              <img src="images/placeholders/220x164.gif" alt=""/>
+              <%= image_tag("placeholders/220x164.gif") %>
               <div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
               <div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
             </a>
