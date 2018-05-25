@@ -44,4 +44,9 @@
     - Render file to fix GUI: rails g kaminari:views default
     Note: After install must be reset rails server
     
+* Active admin
+    - install with use Devise: "rails g active_admin:install"
+    - rake db:migrate
+    - rake db:seed
+    
     
