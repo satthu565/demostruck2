@@ -14,12 +14,12 @@ class ProductsController < ApplicationController
 
   def search
     new_params = params.reject {|n| n=="controller" || n=="action" || n=="commit" || n=="category"}
-    if new_params.empty?
-      @products = Product.all
+    if (new_params.empty? || !new_params["page"].empty?)
+      @products = Product.order('created_at DESC').page(params[:page])
       render "search", :locals => { :product => @products }
     else
-      if (new_params["product"].values.all?(&:blank?) && new_params["date"].values.all?(&:blank?))
-        @products = Product.all
+      if ((new_params["product"].values.all?(&:blank?) && new_params["date"].values.all?(&:blank?)))
+        @products = Product.order('created_at DESC').page(params[:page])
         render "search", :locals => { :product => @products }
       else
         @products = Product.search(new_params)
