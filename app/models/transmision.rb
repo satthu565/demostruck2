@@ -1,3 +1,3 @@
 class Transmision < ApplicationRecord
-  has_many :products
+  # has_many :products
 end
