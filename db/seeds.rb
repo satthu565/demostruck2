@@ -22,3 +22,4 @@ for i in 1..9 do
                  :moreinfo => "Lorem ipsum dolor siuaipiscing ensequa at. Maecenas eget massa at eros ornare rhoncus. In sit a enim risus, in mattis felis",
                  )
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
