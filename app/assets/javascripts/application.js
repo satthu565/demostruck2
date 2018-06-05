@@ -21,5 +21,7 @@
 //= require jquery.fancybox-1.3.4.pack
 //= require jquery.countdown
 //= require jquery.checkbox
+//= require gentelella
+//= require gentelella-custom
 //= require js
 // require_tree .
