@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demostruck2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="<%= controller_name == "sessions" || "registrations"? "login" : "nav-md" %>">
+
+    <%= yield %>
+
+  </body>
+</html>
