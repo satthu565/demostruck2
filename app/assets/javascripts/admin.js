@@ -12,14 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require jquery-1.8.3.min
-//= require jquery.easing.1.3
-//= require jquery.bxslider
-//= require jquery.mousewheel
-//= require jquery.selectik
-//= require jquery.mousewheel-3.0.4.pack
-//= require jquery.fancybox-1.3.4.pack
-//= require jquery.countdown
-//= require jquery.checkbox
-//= require js
+//= require gentelella
+//= require gentelella-custom
 // require_tree .
