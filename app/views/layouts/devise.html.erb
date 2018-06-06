@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demostruck2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="catalog catalog-grid">
+  <!--BEGIN HEADER-->
+  <div id="header">
+aaaa
+  </div>
+  <!--EOF HEADER-->
+
+    <%= yield %>
+
+  <!--BEGIN FOOTER-->
+  <div id="footer">
+      <div class="copyright">&copy; 2013 Auto Sale. All Rights Reserved.</div>
+    </div>
+  </div>
+  <!--EOF FOOTER-->
+  </body>
+</html>
